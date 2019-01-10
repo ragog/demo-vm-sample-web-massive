@@ -10,10 +10,9 @@ import java.net.MalformedURLException;
 public class LoginTest extends AbstractTest {
 
     @Test(dataProvider = "hardCodedBrowsers")
-    public void loginWithValidCredentials(String platformName, String platformVersion,
-                                          String deviceName, String browserName, Method method) throws MalformedURLException {
+    public void loginWithValidCredentials(String browserName, String browserVersion, String platformName, Method method) throws MalformedURLException {
 
-        this.setup(platformName, platformVersion, deviceName, browserName, method);
+        this.setup(browserName, browserVersion, platformName, method);
 
         LoginPage loginPage = new LoginPage(getWebDriver());
         loginPage.load();
@@ -25,10 +24,9 @@ public class LoginTest extends AbstractTest {
     }
 
     @Test(dataProvider = "hardCodedBrowsers")
-    public void loginWithLockedCredentials(String platformName, String platformVersion,
-                                           String deviceName, String browserName, Method method) throws MalformedURLException {
+    public void loginWithLockedCredentials(String browserName, String browserVersion, String platformName, Method method) throws MalformedURLException {
 
-        this.setup(platformName, platformVersion, deviceName, browserName, method);
+        this.setup(browserName, browserVersion, platformName, method);
 
         LoginPage loginPage = new LoginPage(getWebDriver());
         loginPage.load();
@@ -39,10 +37,9 @@ public class LoginTest extends AbstractTest {
     }
 
     @Test(dataProvider = "hardCodedBrowsers")
-    public void loginWithEmptyCredentials(String platformName, String platformVersion,
-                                          String deviceName, String browserName, Method method) throws MalformedURLException {
+    public void loginWithEmptyCredentials(String browserName, String browserVersion, String platformName, Method method) throws MalformedURLException {
 
-        this.setup(platformName, platformVersion, deviceName, browserName, method);
+        this.setup(browserName, browserVersion, platformName, method);
 
         LoginPage loginPage = new LoginPage(getWebDriver());
         loginPage.load();
@@ -53,10 +50,9 @@ public class LoginTest extends AbstractTest {
     }
 
     @Test(dataProvider = "hardCodedBrowsers")
-    public void loginWithEmptyUsername(String platformName, String platformVersion,
-                                       String deviceName, String browserName, Method method) throws MalformedURLException {
+    public void loginWithEmptyUsername(String browserName, String browserVersion, String platformName, Method method) throws MalformedURLException {
 
-        this.setup(platformName, platformVersion, deviceName, browserName, method);
+        this.setup(browserName, browserVersion, platformName, method);
 
         LoginPage loginPage = new LoginPage(getWebDriver());
         loginPage.load();
@@ -67,10 +63,9 @@ public class LoginTest extends AbstractTest {
     }
 
     @Test(dataProvider = "hardCodedBrowsers")
-    public void loginWithEmptyPassword(String platformName, String platformVersion,
-                                       String deviceName, String browserName, Method method) throws MalformedURLException {
+    public void loginWithEmptyPassword(String browserName, String browserVersion, String platformName, Method method) throws MalformedURLException {
 
-        this.setup(platformName, platformVersion, deviceName, browserName, method);
+        this.setup(browserName, browserVersion, platformName, method);
 
         LoginPage loginPage = new LoginPage(getWebDriver());
         loginPage.load();
@@ -81,10 +76,9 @@ public class LoginTest extends AbstractTest {
     }
 
     @Test(dataProvider = "hardCodedBrowsers")
-    public void loginWithInvalidCredentials(String platformName, String platformVersion,
-                                            String deviceName, String browserName, Method method) throws MalformedURLException {
+    public void loginWithInvalidCredentials(String browserName, String browserVersion, String platformName, Method method) throws MalformedURLException {
 
-        this.setup(platformName, platformVersion, deviceName, browserName, method);
+        this.setup(browserName, browserVersion, platformName, method);
 
         LoginPage loginPage = new LoginPage(getWebDriver());
         loginPage.load();
@@ -94,10 +88,9 @@ public class LoginTest extends AbstractTest {
     }
 
     @Test(dataProvider = "hardCodedBrowsers")
-    public void loginWithInvalidUsername(String platformName, String platformVersion,
-                                         String deviceName, String browserName, Method method) throws MalformedURLException {
+    public void loginWithInvalidUsername(String browserName, String browserVersion, String platformName, Method method) throws MalformedURLException {
 
-        this.setup(platformName, platformVersion, deviceName, browserName, method);
+        this.setup(browserName, browserVersion, platformName, method);
 
         LoginPage loginPage = new LoginPage(getWebDriver());
         loginPage.load();
@@ -108,10 +101,9 @@ public class LoginTest extends AbstractTest {
     }
 
     @Test(dataProvider = "hardCodedBrowsers")
-    public void loginWithInvalidPassword(String platformName, String platformVersion,
-                                         String deviceName, String browserName, Method method) throws MalformedURLException {
+    public void loginWithInvalidPassword(String browserName, String browserVersion, String platformName, Method method) throws MalformedURLException {
 
-        this.setup(platformName, platformVersion, deviceName, browserName, method);
+        this.setup(browserName, browserVersion, platformName, method);
 
         LoginPage loginPage = new LoginPage(getWebDriver());
         loginPage.load();

@@ -82,8 +82,8 @@ public class AbstractTest {
         return sessionId.get();
     }
 
-    public void setup(String platformName, String platformVersion, String deviceName,
-                      String browserName, Method method) throws MalformedURLException {
+    public void setup(String browserName, String browserVersion, String platformName,
+                      Method method) throws MalformedURLException {
 
         // Silence Selenium logger
         Logger.getLogger("org.openqa.selenium.remote").setLevel(Level.OFF);
@@ -101,9 +101,8 @@ public class AbstractTest {
 
         capabilities.setCapability("browserName", browserName);
         capabilities.setCapability("extendedDebugging", extendedDebugging);
-        capabilities.setCapability("platformName", platformName);
-        capabilities.setCapability("platformVersion", platformVersion);
-        capabilities.setCapability("phoneOnly", "true");
+        capabilities.setCapability("platform", platformName);
+        capabilities.setCapability("version", browserVersion);
         capabilities.setCapability("name", testName);
         capabilities.setCapability("uuid", testId);
 

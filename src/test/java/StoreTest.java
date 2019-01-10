@@ -10,10 +10,9 @@ import java.net.MalformedURLException;
 public class StoreTest extends AbstractTest {
 
     @Test(dataProvider = "hardCodedBrowsers")
-    public void navigateToItem(String platformName, String platformVersion,
-                               String deviceName, String browserName, Method method) throws MalformedURLException {
+    public void navigateToItem(String browserName, String browserVersion, String platformName, Method method) throws MalformedURLException {
 
-        this.setup(platformName, platformVersion, deviceName, browserName, method);
+        this.setup(browserName, browserVersion, platformName, method);
 
         LoginPage loginPage = new LoginPage(getWebDriver());
         loginPage.load();
