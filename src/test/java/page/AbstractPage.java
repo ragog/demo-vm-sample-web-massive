@@ -4,8 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 /**
  * Created by grago on 27.09.17.
@@ -19,7 +22,7 @@ public abstract class AbstractPage {
 
     public AbstractPage(RemoteWebDriver driver) {
         this.driver = driver;
-//        PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofMillis(10000)), this);
+        PageFactory.initElements(driver, this);
         isRDC = (driver.getCapabilities().getCapability("testobject_api_key") != null);
     }
 

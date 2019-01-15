@@ -25,7 +25,7 @@ public class AbstractTest {
     private ThreadLocal<RemoteWebDriver> webDriver = new ThreadLocal<>();
     private ThreadLocal<String> sessionId = new ThreadLocal<>();
 
-    private String sauceURI = "@ondemand.saucelabs.com:443";
+    private String sauceURI = "@ondemand.saucelabs.com";
     private String buildTag = System.getenv("BUILD_TAG");
     private String username = System.getenv("SAUCE_USERNAME");
     private String accesskey = System.getenv("SAUCE_ACCESS_KEY");
@@ -69,7 +69,6 @@ public class AbstractTest {
                 new Object[]{"chrome", "55.0", "OS X 10.13"},
                 new Object[]{"firefox", "54.0", "OS X 10.13"},
                 new Object[]{"chrome", "54.0", "OS X 10.13"},
-                new Object[]{"firefox", "53.0", "OS X 10.13"},
 
         };
     }
@@ -101,7 +100,7 @@ public class AbstractTest {
 
         capabilities.setCapability("browserName", browserName);
         capabilities.setCapability("extendedDebugging", extendedDebugging);
-        capabilities.setCapability("platform", platformName);
+        capabilities.setCapability("platformName", platformName);
         capabilities.setCapability("version", browserVersion);
         capabilities.setCapability("name", testName);
         capabilities.setCapability("uuid", testId);
