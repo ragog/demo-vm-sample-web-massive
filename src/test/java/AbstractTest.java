@@ -35,7 +35,7 @@ public class AbstractTest {
     }
 
     public RemoteWebDriver getWebDriver() {
-        return webDriver.get();
+            return webDriver.get();
     }
 
     public String getSessionId() {
@@ -78,7 +78,7 @@ public class AbstractTest {
 
     @AfterMethod(alwaysRun = true)
     public void tearDown(ITestResult result) {
-        if (getWebDriver() != null) {
+        if (webDriver != null) {
             String sessionId = getWebDriver().getSessionId().toString();
             boolean status = result.isSuccess();
 

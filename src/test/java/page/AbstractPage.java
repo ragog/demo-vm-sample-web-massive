@@ -22,7 +22,7 @@ public abstract class AbstractPage {
 
     public AbstractPage(RemoteWebDriver driver) {
         this.driver = driver;
-        PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10), this);
+        PageFactory.initElements(new AjaxElementLocatorFactory(driver, 15), this);
         isRDC = (driver.getCapabilities().getCapability("testobject_api_key") != null);
     }
 
