@@ -3,12 +3,11 @@ package page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 /**
  * Created by grago on 27.09.17.
@@ -35,7 +34,7 @@ public abstract class AbstractPage {
             new WebDriverWait(driver, STANDARD_TIMEOUT)
                     .until(ExpectedConditions.visibilityOfElementLocated(elementBy));
             return true;
-        } catch (NoSuchElementException e) {
+        } catch (TimeoutException e) {
             return false;
         }
     }

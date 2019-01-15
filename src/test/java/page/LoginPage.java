@@ -39,6 +39,9 @@ public class LoginPage extends AbstractPage {
         passwordField.sendKeys(credentials.password);
         takeScreenshot();
         passwordField.sendKeys("\n"); // TODO remove after app has been optimised for mobile
+        if (isActive()) {
+            loginButton.click();
+        }
 
         takeScreenshot();
     }
@@ -56,7 +59,7 @@ public class LoginPage extends AbstractPage {
 
     @Override
     public boolean isActive () {
-        return usernameField.isDisplayed();
+        return isElementShown(By.cssSelector("input[type='text']"));
     }
 
 }
