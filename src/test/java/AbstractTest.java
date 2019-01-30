@@ -31,15 +31,11 @@ public class AbstractTest {
 
     @DataProvider(name = "hardCodedBrowsers", parallel = true)
     public static Object[][] sauceBrowserDataProvider(Method testMethod) {
-        return TestTarget.mixedWithoutWindows;
+        return TestTarget.chromeFirefoxPreviousFive;
     }
 
     public RemoteWebDriver getWebDriver() {
             return webDriver.get();
-    }
-
-    public String getSessionId() {
-        return sessionId.get();
     }
 
     public void setup(String browserName, String browserVersion, String platformName,

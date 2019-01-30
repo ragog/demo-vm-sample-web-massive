@@ -1,6 +1,13 @@
 public class TestTarget {
 
-    public static Object[][] mixedWithoutWindows = new Object[][] {
+    public static Object[][] latestOnly = new Object[][] {
+            new Object[]{"firefox", "58.0", "Windows 10"},
+            new Object[]{"chrome", "63.0", "Windows 10"},
+            new Object[]{"firefox", "58.0", "Windows 10"},
+            new Object[]{"chrome", "63.0", "macOS 10.13"}
+    };
+
+    public static Object[][] chromeFirefoxPreviousFive = new Object[][] {
 
             new Object[]{"firefox", "58.0", "Windows 10"},
             new Object[]{"chrome", "63.0", "Windows 10"},
@@ -43,7 +50,3 @@ public class TestTarget {
 
     };
 }
-//                new Object[]{"MicrosoftEdge", "16.16299", "Windows 10"},
-//                new Object[]{"MicrosoftEdge", "15.15063", "Windows 10"},
-//                new Object[]{"MicrosoftEdge", "14.14393", "Windows 10"},
-//                new Object[]{"MicrosoftEdge", "13.10586", "Windows 10"},
