@@ -22,7 +22,7 @@ public class AbstractTest {
     private ThreadLocal<RemoteWebDriver> webDriver = new ThreadLocal<>();
     private ThreadLocal<String> sessionId = new ThreadLocal<>();
 
-    private String sauceURI = "@ondemand.saucelabs.com";
+    private String sauceURI = "@ondemand.eu-central-1.saucelabs.com";
     private String buildTag = System.getenv("BUILD_TAG");
     private String username = System.getenv("SAUCE_USERNAME");
     private String accesskey = System.getenv("SAUCE_ACCESS_KEY");
