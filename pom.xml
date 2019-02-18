@@ -24,7 +24,6 @@
                 <version>3.0.0-M3</version>
                 <configuration>
                     <parallel>methods</parallel>
-                    <!--<forkCount>100</forkCount>-->
                     <threadCount>1000</threadCount>
                     <redirectTestOutputToFile>false</redirectTestOutputToFile>
                 </configuration>

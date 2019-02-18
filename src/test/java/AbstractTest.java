@@ -31,7 +31,7 @@ public class AbstractTest {
 
     @DataProvider(name = "hardCodedBrowsers", parallel = true)
     public static Object[][] sauceBrowserDataProvider(Method testMethod) {
-        return TestTarget.chromeFirefoxPreviousFive;
+        return TestTarget.fullRegression;
     }
 
     public RemoteWebDriver getWebDriver() {
