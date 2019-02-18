@@ -22,16 +22,23 @@ public class AbstractTest {
     private ThreadLocal<RemoteWebDriver> webDriver = new ThreadLocal<>();
     private ThreadLocal<String> sessionId = new ThreadLocal<>();
 
-    private String sauceURI = "@ondemand.eu-central-1.saucelabs.com";
+    private String sauceEndpoint = System.getenv("SAUCE_ENDPOINT");
     private String buildTag = System.getenv("BUILD_TAG");
     private String username = System.getenv("SAUCE_USERNAME");
     private String accesskey = System.getenv("SAUCE_ACCESS_KEY");
     private String extendedDebugging = System.getenv("EXT_DEBUGGING");
+    private static String deviceCoverage = System.getenv("DEVICE_COVERAGE");
     private SauceREST sauceRESTClient = new SauceREST(username, accesskey);
 
     @DataProvider(name = "hardCodedBrowsers", parallel = true)
     public static Object[][] sauceBrowserDataProvider(Method testMethod) {
-        return TestTarget.lightRegression;
+        switch (deviceCoverage) {
+            case "light-regression" : return TestTarget.lightRegression;
+            case "full-regression" : return TestTarget.fullRegression;
+            case "previous-five" : return TestTarget.chromeFirefoxPreviousFive;
+            case "latest-only" : return TestTarget.latestOnly;
+            default : return TestTarget.lightRegression;
+        }
     }
 
     public RemoteWebDriver getWebDriver() {
@@ -62,7 +69,7 @@ public class AbstractTest {
         capabilities.setCapability("name", testName);
         capabilities.setCapability("uuid", testId);
 
-        gridEndpoint = "https://" + username + ":" + accesskey + sauceURI + "/wd/hub";
+        gridEndpoint = "https://" + username + ":" + accesskey + sauceEndpoint + "/wd/hub";
 
         webDriver.set(new RemoteWebDriver(new URL(gridEndpoint), capabilities));
 
