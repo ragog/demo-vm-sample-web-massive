@@ -1,10 +1,10 @@
 public class TestTarget {
 
     public static Object[][] latestOnly = new Object[][] {
-            new Object[]{"firefox", "58.0", "Windows 10"},
-            new Object[]{"chrome", "63.0", "Windows 10"},
-            new Object[]{"firefox", "58.0", "macOS 10.13"},
-            new Object[]{"chrome", "63.0", "macOS 10.13"}
+            new Object[]{"firefox", "latest", "Windows 10"},
+            new Object[]{"chrome", "latest", "Windows 10"},
+            new Object[]{"firefox", "latest", "macOS 10.13"},
+            new Object[]{"chrome", "latest", "macOS 10.13"}
     };
 
     public static Object[][] lightRegression = new Object[][] {
