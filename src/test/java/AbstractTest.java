@@ -4,6 +4,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
@@ -28,11 +29,18 @@ public class AbstractTest {
     private String accesskey = System.getenv("SAUCE_ACCESS_KEY");
     private String extendedDebugging = System.getenv("EXT_DEBUGGING");
     private String capturePerformance = System.getenv("PERFORMANCE");
+    private static String deviceCoverage = System.getenv("DEVICE_COVERAGE");
     private SauceREST sauceRESTClient = new SauceREST(username, accesskey);
 
     @DataProvider(name = "hardCodedBrowsers", parallel = true)
     public static Object[][] sauceBrowserDataProvider(Method testMethod) {
-        return TestTarget.fullRegression;
+        switch (deviceCoverage) {
+            case "latest-chrome" : return TestTarget.latestChrome;
+            case "full-regression" : return TestTarget.fullRegression;
+            case "previous-five" : return TestTarget.chromeFirefoxPreviousFive;
+            case "latest-only" : return TestTarget.latestOnly;
+            default : return TestTarget.latestChrome;
+        }
     }
 
     public RemoteWebDriver getWebDriver() {
