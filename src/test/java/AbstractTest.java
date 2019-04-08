@@ -27,6 +27,7 @@ public class AbstractTest {
     private String username = System.getenv("SAUCE_USERNAME");
     private String accesskey = System.getenv("SAUCE_ACCESS_KEY");
     private String extendedDebugging = System.getenv("EXT_DEBUGGING");
+    private String saucePerformance = System.getenv("PERFORMANCE");
     private static String deviceCoverage = System.getenv("DEVICE_COVERAGE");
     private SauceREST sauceRESTClient = new SauceREST(username, accesskey);
 
@@ -37,6 +38,7 @@ public class AbstractTest {
             case "full-regression" : return TestTarget.fullRegression;
             case "previous-five" : return TestTarget.chromeFirefoxPreviousFive;
             case "latest-only" : return TestTarget.latestOnly;
+            case "latest-chrome" : return TestTarget.latestChrome;
             default : return TestTarget.lightRegression;
         }
     }
@@ -64,6 +66,7 @@ public class AbstractTest {
 
         capabilities.setCapability("browserName", browserName);
         capabilities.setCapability("extendedDebugging", extendedDebugging);
+        capabilities.setCapability("capturePerformance", saucePerformance);
         capabilities.setCapability("platform", platformName);
         capabilities.setCapability("version", browserVersion);
         capabilities.setCapability("name", testName);
