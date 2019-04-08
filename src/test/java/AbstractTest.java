@@ -27,6 +27,7 @@ public class AbstractTest {
     private String username = System.getenv("SAUCE_USERNAME");
     private String accesskey = System.getenv("SAUCE_ACCESS_KEY");
     private String extendedDebugging = System.getenv("EXT_DEBUGGING");
+    private String capturePerformance = System.getenv("PERFORMANCE");
     private SauceREST sauceRESTClient = new SauceREST(username, accesskey);
 
     @DataProvider(name = "hardCodedBrowsers", parallel = true)
@@ -57,6 +58,7 @@ public class AbstractTest {
 
         capabilities.setCapability("browserName", browserName);
         capabilities.setCapability("extendedDebugging", extendedDebugging);
+        capabilities.setCapability("capturePerformance", capturePerformance);
         capabilities.setCapability("platform", platformName);
         capabilities.setCapability("version", browserVersion);
         capabilities.setCapability("name", testName);

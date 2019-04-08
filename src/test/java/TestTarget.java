@@ -1,5 +1,10 @@
 public class TestTarget {
 
+    public static Object[][] latestChrome = new Object[][] {
+            new Object[]{"chrome", "63.0", "Windows 10"},
+            new Object[]{"chrome", "63.0", "macOS 10.13"}
+    };
+
     public static Object[][] latestOnly = new Object[][] {
             new Object[]{"firefox", "58.0", "Windows 10"},
             new Object[]{"chrome", "63.0", "Windows 10"},
