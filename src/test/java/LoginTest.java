@@ -101,7 +101,139 @@ public class LoginTest extends AbstractTest {
     }
 
     @Test(dataProvider = "hardCodedBrowsers")
-    public void loginWithInvalidPassword(String browserName, String browserVersion, String platformName, Method method) throws MalformedURLException {
+    public void loginWithInvalidPassword1(String browserName, String browserVersion, String platformName, Method method) throws MalformedURLException {
+
+        this.setup(browserName, browserVersion, platformName, method);
+
+        LoginPage loginPage = new LoginPage(getWebDriver());
+        loginPage.load();
+        loginPage.performLogin(Credentials.USER_INVALID_PASSWORD);
+
+        Assert.assertTrue(loginPage.isActive());
+
+    }
+    @Test(dataProvider = "hardCodedBrowsers")
+    public void loginWithInvalidPassword2(String browserName, String browserVersion, String platformName, Method method) throws MalformedURLException {
+
+        this.setup(browserName, browserVersion, platformName, method);
+
+        LoginPage loginPage = new LoginPage(getWebDriver());
+        loginPage.load();
+        loginPage.performLogin(Credentials.USER_INVALID_PASSWORD);
+
+        Assert.assertTrue(loginPage.isActive());
+
+    }
+    @Test(dataProvider = "hardCodedBrowsers")
+    public void loginWithInvalidPassword3(String browserName, String browserVersion, String platformName, Method method) throws MalformedURLException {
+
+        this.setup(browserName, browserVersion, platformName, method);
+
+        LoginPage loginPage = new LoginPage(getWebDriver());
+        loginPage.load();
+        loginPage.performLogin(Credentials.USER_INVALID_PASSWORD);
+
+        Assert.assertTrue(loginPage.isActive());
+
+    }
+    @Test(dataProvider = "hardCodedBrowsers")
+    public void loginWithInvalidPassword4(String browserName, String browserVersion, String platformName, Method method) throws MalformedURLException {
+
+        this.setup(browserName, browserVersion, platformName, method);
+
+        LoginPage loginPage = new LoginPage(getWebDriver());
+        loginPage.load();
+        loginPage.performLogin(Credentials.USER_INVALID_PASSWORD);
+
+        Assert.assertTrue(loginPage.isActive());
+
+    }
+    @Test(dataProvider = "hardCodedBrowsers")
+    public void loginWithInvalidPassword5(String browserName, String browserVersion, String platformName, Method method) throws MalformedURLException {
+
+        this.setup(browserName, browserVersion, platformName, method);
+
+        LoginPage loginPage = new LoginPage(getWebDriver());
+        loginPage.load();
+        loginPage.performLogin(Credentials.USER_INVALID_PASSWORD);
+
+        Assert.assertTrue(loginPage.isActive());
+
+    }
+    @Test(dataProvider = "hardCodedBrowsers")
+    public void loginWithInvalidPassword6(String browserName, String browserVersion, String platformName, Method method) throws MalformedURLException {
+
+        this.setup(browserName, browserVersion, platformName, method);
+
+        LoginPage loginPage = new LoginPage(getWebDriver());
+        loginPage.load();
+        loginPage.performLogin(Credentials.USER_INVALID_PASSWORD);
+
+        Assert.assertTrue(loginPage.isActive());
+
+    }
+    @Test(dataProvider = "hardCodedBrowsers")
+    public void loginWithInvalidPassword7(String browserName, String browserVersion, String platformName, Method method) throws MalformedURLException {
+
+        this.setup(browserName, browserVersion, platformName, method);
+
+        LoginPage loginPage = new LoginPage(getWebDriver());
+        loginPage.load();
+        loginPage.performLogin(Credentials.USER_INVALID_PASSWORD);
+
+        Assert.assertTrue(loginPage.isActive());
+
+    }
+    @Test(dataProvider = "hardCodedBrowsers")
+    public void loginWithInvalidPassword8(String browserName, String browserVersion, String platformName, Method method) throws MalformedURLException {
+
+        this.setup(browserName, browserVersion, platformName, method);
+
+        LoginPage loginPage = new LoginPage(getWebDriver());
+        loginPage.load();
+        loginPage.performLogin(Credentials.USER_INVALID_PASSWORD);
+
+        Assert.assertTrue(loginPage.isActive());
+
+    }
+    @Test(dataProvider = "hardCodedBrowsers")
+    public void loginWithInvalidPassword9(String browserName, String browserVersion, String platformName, Method method) throws MalformedURLException {
+
+        this.setup(browserName, browserVersion, platformName, method);
+
+        LoginPage loginPage = new LoginPage(getWebDriver());
+        loginPage.load();
+        loginPage.performLogin(Credentials.USER_INVALID_PASSWORD);
+
+        Assert.assertTrue(loginPage.isActive());
+
+    }
+    @Test(dataProvider = "hardCodedBrowsers")
+    public void loginWithInvalidPassword10(String browserName, String browserVersion, String platformName, Method method) throws MalformedURLException {
+
+        this.setup(browserName, browserVersion, platformName, method);
+
+        LoginPage loginPage = new LoginPage(getWebDriver());
+        loginPage.load();
+        loginPage.performLogin(Credentials.USER_INVALID_PASSWORD);
+
+        Assert.assertTrue(loginPage.isActive());
+
+    }
+    @Test(dataProvider = "hardCodedBrowsers")
+    public void loginWithInvalidPassword11(String browserName, String browserVersion, String platformName, Method method) throws MalformedURLException {
+
+        this.setup(browserName, browserVersion, platformName, method);
+
+        LoginPage loginPage = new LoginPage(getWebDriver());
+        loginPage.load();
+        loginPage.performLogin(Credentials.USER_INVALID_PASSWORD);
+
+        Assert.assertTrue(loginPage.isActive());
+
+    }
+    @Test(dataProvider = "hardCodedBrowsers")
+    public void loginWithInvalidPassword12(String browserName, String browserVersion, String platformName, Method method) throws MalformedURLException {
 
         this.setup(browserName, browserVersion, platformName, method);
 
