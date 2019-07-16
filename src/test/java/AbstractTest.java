@@ -72,7 +72,7 @@ public class AbstractTest {
         capabilities.setCapability("name", testName);
         capabilities.setCapability("uuid", testId);
 
-        gridEndpoint = "https://" + username + ":" + accesskey + sauceEndpoint + "/wd/hub";
+        gridEndpoint = "https://" + username + ":" + accesskey + "@" + sauceEndpoint + "/wd/hub";
 
         webDriver.set(new RemoteWebDriver(new URL(gridEndpoint), capabilities));
 
