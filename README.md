@@ -11,7 +11,7 @@
     ```
     $ export SAUCE_USERNAME=<your Sauce Labs username>
 	$ export SAUCE_ACCESS_KEY=<your Sauce Labs access key>
-	$ export DEVICE_COVERAGE=<your coverage matrix as defined in TestTarget class> (e.g.: lightRegression)
+	$ export DEVICE_COVERAGE=<your coverage matrix as defined in TestTarget class> (e.g.: light-regression)
 	$ export SAUCE_ENDPOINT=<the endpoint matching the Sauce Labs DC you want to target> (e.g.: @ondemand.eu-central-1.saucelabs.com)
 	$ export SAUCE_REST_ENDPOINT=<the REST endpoint matching the Sauce Labs DC you want to target> (e.g.: https://eu-central-1.saucelabs.com/rest/v1)
     ```
