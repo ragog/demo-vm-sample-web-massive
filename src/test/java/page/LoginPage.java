@@ -38,7 +38,7 @@ public class LoginPage extends AbstractPage {
         takeScreenshot();
         passwordField.sendKeys(credentials.password);
         takeScreenshot();
-        passwordField.sendKeys("\n"); // TODO remove after app has been optimised for mobile
+//        passwordField.sendKeys("\n"); // TODO remove after app has been optimised for mobile
         if (isActive()) {
             loginButton.click();
         }
