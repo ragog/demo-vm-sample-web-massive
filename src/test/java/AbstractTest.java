@@ -39,6 +39,8 @@ public class AbstractTest {
             case "previous-five" : return TestTarget.chromeFirefoxPreviousFive;
             case "latest-only" : return TestTarget.latestOnly;
             case "latest-chrome" : return TestTarget.latestChrome;
+            case "latest-safari" : return TestTarget.latestSafari;
+            case "latest-chrome-linux" : return TestTarget.latestChromeLinux;
             default : return TestTarget.lightRegression;
         }
     }
