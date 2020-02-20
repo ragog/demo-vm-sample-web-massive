@@ -28,6 +28,7 @@ public class AbstractTest {
     private String accesskey = System.getenv("SAUCE_ACCESS_KEY");
     private String extendedDebugging = System.getenv("EXT_DEBUGGING");
     private String saucePerformance = System.getenv("PERFORMANCE");
+    private String tunnelId = System.getenv("TUNNEL_ID");
     private static String deviceCoverage = System.getenv("DEVICE_COVERAGE");
     private SauceREST sauceRESTClient = new SauceREST(username, accesskey);
 
@@ -73,6 +74,9 @@ public class AbstractTest {
         capabilities.setCapability("version", browserVersion);
         capabilities.setCapability("name", testName);
         capabilities.setCapability("uuid", testId);
+        if (tunnelId != null) {
+            capabilities.setCapability("tunnelIdentifier", tunnelId);
+        }
 
         gridEndpoint = "https://" + username + ":" + accesskey + "@" + sauceEndpoint + "/wd/hub";
 
